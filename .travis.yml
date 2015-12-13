@@ -2,6 +2,8 @@ language: php
 php:
     - '5.5'
 
+sudo: required
+
 install:
     - composer self-update
     - composer install
