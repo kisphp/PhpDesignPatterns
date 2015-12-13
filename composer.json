@@ -1,0 +1,25 @@
+{
+  "name": "kisphp/PhpDesingPatterns",
+  "description": "Design Patterns examples used in real applications",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Marius-Bogdan Rizac",
+      "email": "mariusbogdan83@gmail.com",
+      "homepage": "http://www.kisphp.com",
+      "role": "Developer"
+    }
+  ],
+  "minimum-stability": "dev",
+  "require": {
+    "php": ">=5.5"
+  },
+  "autoload": {
+    "psr-0": {
+      "": "src/"
+    }
+  },
+  "require-dev": {
+    "codeception/codeception": "~2.1"
+  }
+}
