@@ -8,3 +8,7 @@ install:
 
 script:
     - php vendor/bin/codecept run
+
+cache:
+    directories:
+        - vendor
