@@ -2,22 +2,18 @@
 
 $finder = Symfony\CS\Finder\DefaultFinder::create()
     ->in(__DIR__)
-    ->exclude('tests/_helpers')
-    ->exclude('tests/_support')
-    ->exclude('vendor')
-    ->notName('*.twig')
-    ->notName('*.yml')
 ;
 
 return Symfony\CS\Config\Config::create()
     ->finder($finder)
-    ->setUsingCache(true)
+    ->setUsingCache(false)
     ->level(\Symfony\CS\FixerInterface::PSR2_LEVEL)
     ->fixers(
         [
             'blankline_after_open_tag',
             'braces',
             'concat_with_spaces',
+            '-concat_without_spaces',
             'double_arrow_multiline_whitespaces',
             'duplicate_semicolon',
             'empty_enclosing_lines',
@@ -30,6 +26,7 @@ return Symfony\CS\Config\Config::create()
             'new_with_braces',
             'object_operator',
             'operator_spaces',
+            '-phpdoc_params',
             'phpdoc_no_access',
             'phpdoc_no_package',
             'phpdoc_order',
@@ -64,3 +61,4 @@ return Symfony\CS\Config\Config::create()
         ]
     )
 ;
+
