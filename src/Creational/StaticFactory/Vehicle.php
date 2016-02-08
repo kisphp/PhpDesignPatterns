@@ -8,7 +8,7 @@ class Vehicle implements VehicleInterface
 
     /**
      * @param string $type
-     * @param int $wheels
+     * @param int    $wheels
      *
      * @throws \Exception
      *
