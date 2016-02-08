@@ -4,7 +4,6 @@ namespace Creational\Singleton;
 
 abstract class AbstractSingleton
 {
-
     /**
      * @todo Declare in child class
      */
@@ -16,12 +15,13 @@ abstract class AbstractSingleton
 
     /**
      * @throws SingletonException
+     *
      * @return static
      */
     public static function getInstance()
     {
         if (static::$instance === null) {
-            static::$instance = new static;
+            static::$instance = new static();
         }
 
         return static::$instance;
@@ -29,7 +29,6 @@ abstract class AbstractSingleton
 
     /**
      * @throws SingletonException
-     * @return void
      */
     public function __clone()
     {
@@ -38,11 +37,9 @@ abstract class AbstractSingleton
 
     /**
      * @throws SingletonException
-     * @return void
      */
     public function __wakeup()
     {
         throw new SingletonException('This is a Singleton class. __wakeup() is forbidden.');
     }
-
 }

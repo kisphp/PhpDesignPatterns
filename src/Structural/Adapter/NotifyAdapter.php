@@ -27,9 +27,9 @@ class NotifyAdapter
     }
 
     /**
-     * @param string $from
-     * @param string $to
-     * @param string $message
+     * @param string      $from
+     * @param string      $to
+     * @param string      $message
      * @param string|null $subject
      */
     public function send($from, $to, $message, $subject = null)
